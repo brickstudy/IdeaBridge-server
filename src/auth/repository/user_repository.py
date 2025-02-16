@@ -9,12 +9,12 @@ class UserRepository(BaseUserRepository):
     def __init__(self, db: Client):
         self.user_table = db.table("users")
 
-    def get_user(self, user_dto: User) -> User:
+    def get_user_with_email(self, email: str) -> User:
         try:
-            response = self.user_table.select("*").eq("email", user_dto.email).execute()
+            response = self.user_table.select("*").eq("email", email).execute()
             if not response.data:
                 raise DataNotFoundException
-            user =response.data[0]
+            user = response.data[0]
             return User(
                 email=user["email"],
                 password=user["password"],

@@ -9,12 +9,12 @@ class TestUserRepository:
     def user_repository(self, client):
         return UserRepository(client)
     
-    def test_get_user(self, user_repository):
+    def test_can_get_user_with_email(self, user_repository):
         # given
         email = "test@test.com"
         
         # when
-        user = user_repository.get_user(User(email=email))
+        user = user_repository.get_user_with_email(email)
         
         # then
         assert user.email == email
@@ -54,4 +54,4 @@ class TestUserRepository:
         
         # then
         with pytest.raises(DataNotFoundException):
-            user_repository.get_user(User(email=email))
+            user_repository.get_user_with_email(email)
