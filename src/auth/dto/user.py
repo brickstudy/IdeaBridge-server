@@ -14,4 +14,12 @@ class User:
     password: Optional[str] = None
     role: Optional[str] = None
     is_active: Optional[bool] = None
-    created_at: Optional[datetime] = None
+
+    def to_dict(self) -> dict:
+        return {
+            "email": self.email,
+            "name": self.name,
+            "password": self.password,
+            "role": self.role,
+            "is_active": self.is_active,
+        }

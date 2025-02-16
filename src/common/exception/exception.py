@@ -35,6 +35,13 @@ class DataBaseException(RepositoryException):
     def __init__(self, error_code: ErrorCode = ErrorCode.DATABASE_ERROR, message: str = '데이터베이스 오류', detail: str = None):
         super().__init__(error_code, message, detail)
 
+
+class DuplicateDataException(RepositoryException):
+    """중복 데이터 예외"""
+    def __init__(self, error_code: ErrorCode = ErrorCode.DUPLICATE_DATA, message: str = '중복 데이터 존재합니다.', detail: str = None):
+        super().__init__(error_code, message, detail)
+
+
 class ServiceException(AppException):
     """Service 관련 예외"""
     pass
