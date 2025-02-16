@@ -6,7 +6,8 @@ class ErrorCode(Enum):
     SYSTEM_ERROR = 10000
     
     # 20000 ~ 29999: Repository 관련 오류
-    DATA_NOT_FOUND = 20000
+    DATABASE_ERROR = 20000
+    DATA_NOT_FOUND = 20001
     
     # 30000 ~ 39999: Service 관련 오류
     
