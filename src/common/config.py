@@ -18,3 +18,6 @@ _config = load_yml(CONFIG_YML_PATH)
 class Config:
     def get_supabase():
         return _config["supabase"]
+
+    def get_jwt():
+        return _config["jwt"]

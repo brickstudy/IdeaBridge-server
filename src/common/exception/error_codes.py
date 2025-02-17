@@ -14,3 +14,5 @@ class ErrorCode(Enum):
     
     # 40000 ~ 49999: Controller 관련 오류
     
+    # 50000 ~ 59999: Util 관련 오류
+    TOKEN_ERROR = 50000

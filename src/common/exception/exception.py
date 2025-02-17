@@ -50,3 +50,4 @@ class ServiceException(AppException):
 class ControllerException(AppException):
     """Controller 관련 예외"""
     pass
+
