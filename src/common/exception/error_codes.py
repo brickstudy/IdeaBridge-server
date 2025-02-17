@@ -11,6 +11,7 @@ class ErrorCode(Enum):
     DUPLICATE_DATA = 20002
 
     # 30000 ~ 39999: Service 관련 오류
+    VALIDATION_ERROR = 30000
     
     # 40000 ~ 49999: Controller 관련 오류
     

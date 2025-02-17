@@ -42,11 +42,6 @@ class DuplicateDataException(RepositoryException):
         super().__init__(error_code, message, detail)
 
 
-class ServiceException(AppException):
-    """Service 관련 예외"""
-    pass
-
-
 class ControllerException(AppException):
     """Controller 관련 예외"""
     pass

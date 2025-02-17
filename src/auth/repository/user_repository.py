@@ -13,7 +13,7 @@ class UserRepository(BaseUserRepository):
         try:
             response = self.user_table.select("*").eq("email", email).execute()
             if not response.data:
-                raise DataNotFoundException
+                return None
             user = response.data[0]
             return User(
                 email=user["email"],
